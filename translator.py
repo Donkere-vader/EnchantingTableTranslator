@@ -60,6 +60,7 @@ class Translator:
             for line in text.split('\n'):
                 f.write(line + "\n")
             f.close()
+            print("! Saved to output.txt ")
 
 translator = Translator()
 what = input("$ What do you want to translate ((F)ile / (T)yped text)?: ")
@@ -83,3 +84,6 @@ else:
         text += inpt.replace("\\:q", ":q") + "\n"
 
     translator.translate(text, to=to)
+
+while input() == "":
+    pass
